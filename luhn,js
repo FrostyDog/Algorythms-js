@@ -1,0 +1,16 @@
+/*
+@param {number} cnn
+@return {boolean}
+*/
+function isCreditCardNumber(ccn) {
+  const array = ccn.toString().split('')
+  for (let i = array.length - 2; i >= 0; i = i - 2) {
+   if(Number(array[i]) * 2 >= 10){ 
+    array[i] = array[i] * 2
+    let twoDigit = array[i].toString().split('')
+    array[i] = twoDigit.reduce((acc, el) => Number(el) + Number(acc), 0)
+  } else {array[i] = Number(array[i]) * 2}
+  }
+  let y = array.reduce((acc, el) => Number(acc) + Number(el), 0)
+  return y % 10 === 0
+  }
