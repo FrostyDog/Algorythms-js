@@ -1,2 +1,3 @@
-# CCN-Luhn-Validation.js
-Simple algorythm in JS to validate Credit Card Number
+# Simple Algorythms
+* Luhn js validation (Credit Card Number Validation)
+* Getting Digital Root
